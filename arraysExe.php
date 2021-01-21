@@ -166,12 +166,14 @@ echo('<br/><hr/><br/>');
 // //-------------------------------
 // //Q11
 
-echo("<h2>Q10</h2>");
+echo("<h2>Q11</h2>");
 $array1 = array(array(70,40), array(25, 45));
 $array2 = array("example", "com");
 
 function margeArray($arr1,$arr2){
-    return [$arr1,$arr2];
+    array_unshift($arr1[0],$arr2[0]);
+    array_unshift($arr1[1],$arr2[1]);
+    return [$arr1];
 }
 $margedArray=margeArray($array1,$array2);
 var_dump($margedArray);
